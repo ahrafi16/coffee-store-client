@@ -39,11 +39,11 @@ const FollowUs = () => {
 
     return (
         <div>
-            <div className="flex  flex-col gap-3 items-center my-6">
+            <div className="flex  flex-col  gap-3 items-center my-6">
                 <p className="text-xl">Follow Us Now</p>
                 <h2 className="text-3xl font-extrabold rancho-regular">Follow on Instagram</h2>
             </div>
-            <div className="grid my-6 grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid my-6 grid-cols-1 md:grid-cols-4 gap-6 px-6 md:px-28">
                 {
                     images.map((i) => (
                         <img key={i.id} className="w-full p-6 md:p-0 duration-200 hover:scale-105" src={i.imgAddress} alt=""></img>

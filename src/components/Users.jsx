@@ -44,8 +44,8 @@ const Users = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-2xl">Users: {users.length}</h2>
+        <div className="px-6 my-8 md:px-28">
+            <h2 className="text-2xl rancho-regular my-3">Total Users: {users.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -85,9 +85,9 @@ const Users = () => {
                                     </td>
                                     <td>{user.phone}</td>
                                     <th>
-                                        <button className="btn m-1 btn-xs"><Eye /></button>
-                                        <button className="btn m-1 btn-xs"><Pencil /></button>
-                                        <button onClick={() => handleDelete(user._id)} className="btn m-1 btn-xs"><Trash /></button>
+                                        <button className="btn mx-1 p-1 "><Eye /></button>
+                                        <button className="btn mx-1 p-1 "><Pencil /></button>
+                                        <button onClick={() => handleDelete(user._id)} className="btn mx-1 p-1 hover:bg-[#EA4744] hover:text-white"><Trash /></button>
                                     </th>
                                 </tr>
                             ))

@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Features></Features>
-            <div style={{ backgroundImage: `url(${bg})` }} className="my-16">
+            <div style={{ backgroundImage: `url(${bg})` }} className="my-16 px-6 md:px-28">
                 <div className="flex  flex-col gap-3 items-center my-6">
                     <p className="text-xl">---Sip & Savor---</p>
                     <h2 className="text-3xl font-extrabold rancho-regular">Our Popular Products</h2>

@@ -71,7 +71,7 @@ const SignUp = () => {
             <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
                 <h2 className="text-2xl font-bold text-center mb-6">Create an Account</h2>
 
-                <form onSubmit={handleSignUp} className="space-y-4">
+                <form onSubmit={handleSignUp} className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Name */}
                     <div>
                         <label className="block text-sm font-medium mb-1">Full Name</label>
@@ -102,16 +102,7 @@ const SignUp = () => {
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
-                    {/* Photo url */}
-                    <div>
-                        <label className="block text-sm font-medium mb-1">Photo URL</label>
-                        <input
-                            type="text"
-                            name="photo"
-                            placeholder="Enter photo URL"
-                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
+
 
                     {/* Email */}
                     <div>
@@ -146,10 +137,21 @@ const SignUp = () => {
                         />
                     </div>
 
+                    {/* Photo url */}
+                    <div className="md:col-span-2">
+                        <label className="block text-sm font-medium mb-1">Photo URL</label>
+                        <input
+                            type="text"
+                            name="photo"
+                            placeholder="Enter photo URL"
+                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+
                     {/* Submit */}
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+                        className=" md:col-span-2 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
                     >
                         Sign Up
                     </button>

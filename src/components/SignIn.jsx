@@ -1,10 +1,11 @@
 import { use } from "react";
-import { Link } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
+import Swal from "sweetalert2";
 
 
 const SignIn = () => {
-
+    const navigate = useNavigate();
     const { signInUser } = use(AuthContext);
 
     const handleSignIn = (e) => {
@@ -30,14 +31,26 @@ const SignIn = () => {
                     },
                     body: JSON.stringify(signInInfo)
                 })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log("After update patch", data)
-                    })
+                // .then(res => res.json())
+                // .then(data => {
+                //     console.log("After update patch", data)
+                // })
+                Swal.fire({
+                    icon: "success",
+                    title: "Login successful",
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+
+                navigate("/");
 
             })
             .catch(error => {
-                console.log(error);
+                Swal.fire({
+                    icon: "error",
+                    title: "Login failed",
+                    text: error.message
+                });
             })
 
 

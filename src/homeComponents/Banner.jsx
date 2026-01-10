@@ -14,6 +14,7 @@ const Banner = () => {
                     <div className="flex gap-2">
                         <Link to="/"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Learn more</button></Link>
                         <Link to="/users"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Users</button></Link>
+                        <Link to="/signup"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Join</button></Link>
                     </div>
                 </div>
             </div>
