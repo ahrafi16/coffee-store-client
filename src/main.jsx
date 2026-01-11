@@ -14,16 +14,19 @@ import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
 import AuthProvider from './contexts/AuthProvider.jsx';
 import Users from './components/Users.jsx';
+import UserDetails from './components/UserDetails.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
         loader: () => fetch('http://localhost:3000/coffees'),
-        Component: Home
+        Component: Home,
       }, {
         path: "/addCoffee",
         Component: AddCoffee
@@ -50,7 +53,12 @@ const router = createBrowserRouter([
         path: "users",
         loader: () => fetch('http://localhost:3000/users'),
         Component: Users
-      }
+      },
+      {
+        path: "/users/:id",
+        loader: ({ params }) => fetch(`http://localhost:3000/users/${params.id}`),
+        Component: UserDetails
+      },
     ]
   },
 ]);

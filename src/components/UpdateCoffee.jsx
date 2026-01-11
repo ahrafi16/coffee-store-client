@@ -35,8 +35,8 @@ const UpdateCoffee = () => {
 
     }
     return (
-        <div className="my-6">
-            <Link to="/"><p className='rancho-regular text-xl my-3 flex gap-2 items-center hover:bg-[#D2B48C] cursor-pointer p-2 rounded-xl w-fit'> <ArrowLeft /> Back to Home</p></Link>
+        <div className="my-6 px-6 md:px-28">
+            <Link to="/"><p className='rancho-regular text-xl my-3 flex gap-2 items-center hover:bg-[#D2B48C] hover:text-white cursor-pointer p-2 rounded-xl w-fit'> <ArrowLeft /> Back to Home</p></Link>
             <div className="p-12 text-center space-y-4 bg-[#F4F3F0] border border-gray-300 rounded-md">
                 <div className="p-6 space-y-6">
                     <h1 className="text-5xl rancho-regular font-bold text-[#374151]">Update Existing Coffee Details</h1>

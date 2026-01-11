@@ -12,9 +12,9 @@ const Banner = () => {
                     <h2 className="text-4xl rancho-regular">Would you like a Cup of Delicious Coffee?</h2>
                     <p>It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
                     <div className="flex gap-2">
-                        <Link to="/"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Learn more</button></Link>
-                        <Link to="/users"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Users</button></Link>
-                        <Link to="/signup"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-[#331A15] rancho-regular" >Join</button></Link>
+                        <Link to="/learnmore"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-transparent rancho-regular" >Learn more</button></Link>
+                        <Link to="/users"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-transparent rancho-regular" >Users</button></Link>
+                        <Link to="/signup"><button className="btn hover:border-2 hover:border-white bg-[#E3B577] flex items-center hover:text-white hover:bg-transparent rancho-regular" >Join</button></Link>
                     </div>
                 </div>
             </div>

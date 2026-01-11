@@ -1,6 +1,6 @@
 import { Eye, Pencil, Trash } from "lucide-react";
 import { useState } from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 
 
@@ -85,7 +85,10 @@ const Users = () => {
                                     </td>
                                     <td>{user.phone}</td>
                                     <th>
-                                        <button className="btn mx-1 p-1 "><Eye /></button>
+                                        <Link to={`/users/${user._id}`}>
+                                            <button data-modal-target="default-modal" data-modal-toggle="default-modal" className="btn mx-1 p-1 "><Eye /></button>
+                                        </Link>
+
                                         <button className="btn mx-1 p-1 "><Pencil /></button>
                                         <button onClick={() => handleDelete(user._id)} className="btn mx-1 p-1 hover:bg-[#EA4744] hover:text-white"><Trash /></button>
                                     </th>

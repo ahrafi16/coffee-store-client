@@ -9,8 +9,6 @@ const MainLayout = () => {
     return (
         <div>
             <Header></Header>
-            {/* <Banner></Banner>
-            <Features></Features> */}
             <div className="">
                 <Outlet></Outlet>
             </div>
