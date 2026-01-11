@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import Swal from "sweetalert2";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const SignUp = () => {
-
+    const navigate = useNavigate();
     const { createUser } = useContext(AuthContext);
     console.log(createUser);
 
@@ -58,6 +58,8 @@ const SignUp = () => {
                                 timer: 1500
                             });
                         }
+                        form.reset();
+                        navigate("/");
                     })
             })
             .catch(error => {
