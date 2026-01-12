@@ -40,7 +40,7 @@ const SignUp = () => {
                 console.log(email, password, confirmPassword, userProfile);
 
                 // save profile info to the database
-                fetch('http://localhost:3000/users', {
+                fetch('https://coffee-store-server-psi-topaz.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

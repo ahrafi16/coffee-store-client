@@ -14,7 +14,7 @@ const AddCoffee = () => {
 
 
         // send data to the db
-        fetch('http://localhost:3000/coffees', {
+        fetch('https://coffee-store-server-psi-topaz.vercel.app/coffees', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
